@@ -22,7 +22,6 @@ struct MovieRow: ConnectedView {
         let movie: Movie
     }
     
-    // MARK: - Init
     let movieId: Int
     var displayListImage = true
     

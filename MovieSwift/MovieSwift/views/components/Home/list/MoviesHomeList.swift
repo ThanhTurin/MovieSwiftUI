@@ -26,7 +26,7 @@ struct MoviesHomeList: ConnectedView {
     
     func body(props: Props) -> some View {
         MoviesList(movies: props.movies,
-                   displaySearch: true,
+                   displaySearch: false,
                    pageListener: pageListener,
                    headerView: headerView)
             .navigationBarTitle(menu.title())
