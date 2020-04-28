@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let controller = UIHostingController(rootView:
             StoreProvider(store: store) {
-                HomeView()
+                TabbarView()
         })
         window.rootViewController = controller
         self.window = window
