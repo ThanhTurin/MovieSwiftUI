@@ -14,7 +14,7 @@ struct TabbarView: View {
     @State var selectedTab = Tab.movies
     
     enum Tab: Int {
-        case movies, discover, fanClub, myLists
+        case movies
     }
     
     func tabbarItem(text: String, image: String) -> some View {
