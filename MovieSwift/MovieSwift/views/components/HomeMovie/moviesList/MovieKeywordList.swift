@@ -28,7 +28,7 @@ struct MovieKeywordList : View {
     }
     
     var body: some View {
-        MoviesList(movies: movies, displaySearch: false, pageListener: pageListener)
+        MoviesList(movies: movies, pageListener: pageListener)
             .navigationBarTitle(Text(keyword.name.capitalized))
             .onAppear {
                 self.pageListener.keyword = self.keyword.id

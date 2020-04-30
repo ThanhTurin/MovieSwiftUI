@@ -8,10 +8,9 @@
 
 import SwiftUI
 import Combine
-import SwiftUIFlux
 
 struct MoviesHome : View {
-  @EnvironmentObject private var store: Store<AppState>
+
   @ObservedObject private var selectedMenu = MoviesSelectedMenuStore(selectedMenu: MoviesMenu.allCases.first!)
   @State private var isSettingPresented = false
 
@@ -26,13 +25,11 @@ struct MoviesHome : View {
   }
 
   private var homeAsList: some View {
-    Group {
-      MoviesHomeList(
-        menu: $selectedMenu.menu,
-        pageListener: selectedMenu.pageListener,
-        headerView: nil
-      )
-    }
+    MoviesHomeList(
+      menu: $selectedMenu.menu,
+      pageListener: selectedMenu.pageListener,
+      headerView: nil
+    )
   }
 
   private func navigationView(content: AnyView) -> some View {
@@ -44,15 +41,20 @@ struct MoviesHome : View {
   }
 
   var body: some View {
-    let view = Group {
-      homeAsList
-    }
+    let view = MoviesHomeList(
+      menu: $selectedMenu.menu,
+      pageListener: selectedMenu.pageListener,
+      headerView: nil
+    )
     .navigationBarItems(trailing:
       HStack {
         settingButton
       }
-    ).sheet(isPresented: $isSettingPresented, content: { SettingsForm()
+    )
+    .sheet(isPresented: $isSettingPresented, content: {
+      SettingsForm()
     })
+
     return navigationView(content: AnyView(view))
   }
 }

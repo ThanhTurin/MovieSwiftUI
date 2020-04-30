@@ -55,7 +55,7 @@ struct MoviesGenreList: ConnectedView {
     }
     
     func body(props: Props) -> some View {
-        MoviesList(movies: props.movies, displaySearch: false, pageListener: pageListener)
+        MoviesList(movies: props.movies, pageListener: pageListener)
             .navigationBarItems(trailing: (
                 Button(action: {
                     self.isSortSheetPresented.toggle()

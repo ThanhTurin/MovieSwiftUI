@@ -312,7 +312,7 @@
 			path = myLists;
 			sourceTree = "<group>";
 		};
-		691F7A0522E6D79200755E44 /* Home */ = {
+		691F7A0522E6D79200755E44 /* HomeMovie */ = {
 			isa = PBXGroup;
 			children = (
 				695882BB22AD10B300AFABA9 /* moviesList */,
@@ -320,7 +320,7 @@
 				697033DC234F893600AF5A47 /* list */,
 				69D1D76C22BE57390084C692 /* MoviesHome.swift */,
 			);
-			path = Home;
+			path = HomeMovie;
 			sourceTree = "<group>";
 		};
 		691F7A0622E6D81B00755E44 /* genres */ = {
@@ -558,7 +558,7 @@
 			children = (
 				6967C88022E8F5D500BA49B1 /* fan club */,
 				692AA63022AD3FEF0054DA84 /* Tabbar */,
-				691F7A0522E6D79200755E44 /* Home */,
+				691F7A0522E6D79200755E44 /* HomeMovie */,
 				691F7A0422E6D75900755E44 /* myLists */,
 				691F7A0622E6D81B00755E44 /* genres */,
 				694219F822CF3D29008004A2 /* bottomMenu */,

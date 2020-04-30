@@ -14,7 +14,7 @@ struct MoviesCrewList : View {
     let crew: People
 
     var body: some View {
-        MoviesList(movies: store.state.moviesState.withCrew[crew.id] ?? [], displaySearch: false)
+        MoviesList(movies: store.state.moviesState.withCrew[crew.id] ?? [])
             .navigationBarTitle(Text(crew.name))
             .onAppear {
                 self.store.dispatch(action: MoviesActions.FetchMovieWithCrew(crew: self.crew.id))

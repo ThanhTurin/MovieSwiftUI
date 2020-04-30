@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "69FFAF7B22A99F1100801F3C"
-               BuildableName = "MovieSwift.app"
+               BuildableName = "Flashmem.app"
                BlueprintName = "MovieSwift"
                ReferencedContainer = "container:MovieSwift.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "69FFAF7B22A99F1100801F3C"
-            BuildableName = "MovieSwift.app"
+            BuildableName = "Flashmem.app"
             BlueprintName = "MovieSwift"
             ReferencedContainer = "container:MovieSwift.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "69FFAF7B22A99F1100801F3C"
-            BuildableName = "MovieSwift.app"
+            BuildableName = "Flashmem.app"
             BlueprintName = "MovieSwift"
             ReferencedContainer = "container:MovieSwift.xcodeproj">
          </BuildableReference>

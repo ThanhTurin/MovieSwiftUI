@@ -25,10 +25,7 @@ struct MoviesHomeList: ConnectedView {
     }
     
     func body(props: Props) -> some View {
-        MoviesList(movies: props.movies,
-                   displaySearch: false,
-                   pageListener: pageListener,
-                   headerView: headerView)
+        MoviesList(movies: props.movies, pageListener: pageListener)
             .navigationBarTitle(menu.title())
     }
 }
