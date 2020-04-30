@@ -7,20 +7,12 @@
 //
 
 import SwiftUI
-import SwiftUIFlux
 
-// MARK: - Movies List
-struct MoviesList: ConnectedView {
-  struct Props {}
-
+struct MoviesList: View {
   let movies: [Int]
   var pageListener: MoviesPagesListener?
 
-  func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
-    return Props()
-  }
-
-  func body(props: Props) -> some View {
+  var body: some View {
     List {
       ForEach(movies, id: \.self) { id in
         NavigationLink(destination: MovieDetail(movieId: id)) {
@@ -38,7 +30,7 @@ struct MoviesList: ConnectedView {
             if self.pageListener != nil && !self.movies.isEmpty {
               self.pageListener?.currentPage += 1
             }
-        }
+          }
       }
     }
   }

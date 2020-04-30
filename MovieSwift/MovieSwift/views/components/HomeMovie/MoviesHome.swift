@@ -10,7 +10,6 @@ import SwiftUI
 import Combine
 
 struct MoviesHome : View {
-
   @ObservedObject private var selectedMenu = MoviesSelectedMenuStore(selectedMenu: MoviesMenu.allCases.first!)
   @State private var isSettingPresented = false
 
