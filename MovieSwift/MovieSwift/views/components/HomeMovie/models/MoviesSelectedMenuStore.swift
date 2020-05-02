@@ -11,16 +11,16 @@ import Combine
 import SwiftUI
 
 final class MoviesSelectedMenuStore: ObservableObject {
-    let pageListener: MoviesMenuListPageListener
-    
-    @Published var menu: MoviesMenu {
-        didSet {
-            pageListener.menu = menu
-        }
+  let pageListener: MoviesMenuListPageListener
+
+  @Published var menu: MoviesMenu {
+    didSet {
+      pageListener.menu = menu
     }
-        
-    init(selectedMenu: MoviesMenu) {
-        self.menu = selectedMenu
-        self.pageListener = MoviesMenuListPageListener(menu: selectedMenu)
-    }
+  }
+
+  init(selectedMenu: MoviesMenu) {
+    self.menu = selectedMenu
+    self.pageListener = MoviesMenuListPageListener(menu: selectedMenu)
+  }
 }

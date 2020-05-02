@@ -9,7 +9,8 @@
 import SwiftUI
 import Combine
 
-struct MoviesHome : View {
+struct MoviesHome: View {
+
   @ObservedObject private var selectedMenu = MoviesSelectedMenuStore(selectedMenu: MoviesMenu.allCases.first!)
   @State private var isSettingPresented = false
 
@@ -23,14 +24,6 @@ struct MoviesHome : View {
     }
   }
 
-  private var homeAsList: some View {
-    MoviesHomeList(
-      menu: $selectedMenu.menu,
-      pageListener: selectedMenu.pageListener,
-      headerView: nil
-    )
-  }
-
   private func navigationView(content: AnyView) -> some View {
     Group {
       NavigationView {
@@ -40,26 +33,16 @@ struct MoviesHome : View {
   }
 
   var body: some View {
-    let view = MoviesHomeList(
-      menu: $selectedMenu.menu,
-      pageListener: selectedMenu.pageListener,
-      headerView: nil
-    )
-    .navigationBarItems(trailing:
-      HStack {
-        settingButton
-      }
-    )
-    .sheet(isPresented: $isSettingPresented, content: {
-      SettingsForm()
-    })
+    let view = MoviesHomeList(menu: $selectedMenu.menu, pageListener: selectedMenu.pageListener)
+    .navigationBarItems(trailing: settingButton)
+    .sheet(isPresented: $isSettingPresented, content: { SettingsForm() })
 
     return navigationView(content: AnyView(view))
   }
 }
 
 #if DEBUG
-struct MoviesHome_Previews : PreviewProvider {
+struct MoviesHome_Previews: PreviewProvider {
   static var previews: some View {
     MoviesHome().environmentObject(sampleStore)
   }

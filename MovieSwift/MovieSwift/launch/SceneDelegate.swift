@@ -60,9 +60,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 
-let store = Store<AppState>(reducer: appStateReducer,
-                            middleware: [loggingMiddleware],
-                            state: AppState())
+let store = Store<AppState>(reducer: appStateReducer, middleware: [loggingMiddleware], state: AppState())
 
 #if DEBUG
 let sampleCustomList = CustomList(
